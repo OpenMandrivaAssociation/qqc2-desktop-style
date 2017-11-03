@@ -33,8 +33,8 @@ between QWidget-based and QML-based apps.
 %ninja_install -C build
 
 %files
-%dir %{_libdir}/qt/plugins/kf5/kirigami
-%{_libdir}/qt/plugins/kf5/kirigami/org.kde.desktop.so
-%{_qt5_qmldir}/QtQuick/Controls.2/org.kde.desktop/
-%{_qt5_qmldir}/org/kde/qqc2desktopstyle/
-%{_libdir}/cmake/KF5QQC2DeskopStyle/
+%dir %{_libdir}/qt5/plugins/kf5/kirigami
+%{_libdir}/qt5/plugins/kf5/kirigami/org.kde.desktop.so
+%{_libdir}/qt5/qml/QtQuick/Controls.2/org.kde.desktop
+%{_libdir}/qt5/qml/org/kde/qqc2desktopstyle
+%{_libdir}/cmake/KF5QQC2DeskopStyle
