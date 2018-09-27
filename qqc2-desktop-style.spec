@@ -29,7 +29,7 @@ Requires: %{name} >= %{EVRD}
 %description devel
 Development files for %{name}.
 
-%files deve
+%files devel
 %{_libdir}/cmake/KF5QQC2DeskopStyle
 
 %prep
