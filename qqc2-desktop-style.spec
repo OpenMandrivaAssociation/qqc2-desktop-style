@@ -1,9 +1,10 @@
 Summary: QtQuickControls2 style for consistency between QWidget and QML apps 
 Name: qqc2-desktop-style
 Version: 5.50.0
-Release: 1
+Release: 2
 License: GPLv3
 URL: http://kde.org/
+Group: System/Libraries
 Source0: http://download.kde.org/stable/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Kirigami2) >= %{version}
@@ -20,8 +21,19 @@ This is a style for QtQuickControls 2 that uses QWidget's QStyle for
 painting, making possible to achieve an higher degree of consistency
 between QWidget-based and QML-based apps.
 
+%package devel
+Summary: Development files for %{name}
+Group: Development/KDE and Qt
+Requires: %{name} >= %{EVRD}
+
+%description devel
+Development files for %{name}.
+
+%files deve
+%{_libdir}/cmake/KF5QQC2DeskopStyle
+
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
@@ -35,4 +47,3 @@ between QWidget-based and QML-based apps.
 %{_libdir}/qt5/plugins/kf5/kirigami/org.kde.desktop.so
 %{_libdir}/qt5/qml/QtQuick/Controls.2/org.kde.desktop
 %{_libdir}/qt5/qml/org/kde/qqc2desktopstyle
-%{_libdir}/cmake/KF5QQC2DeskopStyle
