@@ -1,13 +1,13 @@
 Summary: QtQuickControls2 style for consistency between QWidget and QML apps 
 Name: qqc2-desktop-style
-Version: 5.67.0
+Version: 5.67.1
 Release: 1
 License: GPLv3
 URL: http://kde.org/
 Group: System/Libraries
 Source0: http://download.kde.org/stable/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 BuildRequires: cmake(ECM)
-BuildRequires: cmake(KF5Kirigami2) >= %{version}
+BuildRequires: cmake(KF5Kirigami2) >= %(echo %{version} |cut -d. -f1-2).0
 BuildRequires: cmake(KF5ConfigWidgets)
 BuildRequires: cmake(KF5IconThemes)
 BuildRequires: cmake(Qt5Gui)
