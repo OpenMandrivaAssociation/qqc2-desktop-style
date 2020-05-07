@@ -1,6 +1,6 @@
 Summary: QtQuickControls2 style for consistency between QWidget and QML apps 
 Name: qqc2-desktop-style
-Version: 5.69.0
+Version: 5.70.0
 Release: 1
 License: GPLv3
 URL: http://kde.org/
