@@ -32,6 +32,7 @@ Requires: %{name} >= %{EVRD}
 Development files for %{name}.
 
 %files devel
+%{_libdir}/cmake/KF5QQC2DeskopStyle
 %{_libdir}/cmake/KF5QQC2DesktopStyle
 
 %prep
