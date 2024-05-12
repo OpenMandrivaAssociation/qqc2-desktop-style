@@ -44,9 +44,13 @@ Development files for %{name}.
 
 %install
 %ninja_install -C build
-%find_lang qqc2desktopstyle_qt --with-qt --all-name
 
-%files -f qqc2desktopstyle_qt.lang
+# Remove translations for the time being, they clash with
+# plasma6 versions
+rm -rf %{buildroot}%{_datadir}/locale
+#find_lang qqc2desktopstyle_qt --with-qt --all-name
+
+%files
 %dir %{_libdir}/qt5/plugins/kf5/kirigami
 %{_libdir}/qt5/plugins/kf5/kirigami/org.kde.desktop.so
 %{_libdir}/qt5/qml/QtQuick/Controls.2/org.kde.desktop
