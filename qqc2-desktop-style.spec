@@ -1,6 +1,6 @@
 Summary: QtQuickControls2 style for consistency between QWidget and QML apps 
 Name: qqc2-desktop-style
-Version: 5.115.0
+Version: 5.116.0
 Release: 1
 License: GPLv3
 URL: http://kde.org/
@@ -44,8 +44,9 @@ Development files for %{name}.
 
 %install
 %ninja_install -C build
+%find_lang qqc2desktopstyle_qt --with-qt --all-name
 
-%files
+%files -f qqc2desktopstyle_qt.lang
 %dir %{_libdir}/qt5/plugins/kf5/kirigami
 %{_libdir}/qt5/plugins/kf5/kirigami/org.kde.desktop.so
 %{_libdir}/qt5/qml/QtQuick/Controls.2/org.kde.desktop
