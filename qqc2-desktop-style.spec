@@ -3,7 +3,7 @@ Name: qqc2-desktop-style
 Version: 5.116.1
 Release: 2
 License: GPLv3
-URL: http://kde.org/
+URL: https://kde.org/
 Group: System/Libraries
 Source0: http://download.kde.org/stable/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 BuildRequires: cmake(ECM)
